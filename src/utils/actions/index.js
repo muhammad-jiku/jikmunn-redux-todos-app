@@ -1,4 +1,7 @@
+//  external import
 import axios from 'axios';
+
+//  internal imports
 import {
   GET_TODOS_FAILURE,
   GET_TODOS_REQUEST,
@@ -8,7 +11,7 @@ import {
 const API_URI = 'https://jsonplaceholder.typicode.com/todos';
 
 //  get todos request
-export const getTodosRequest = () => async (dispatch) => {
+export const getTodos = () => async (dispatch) => {
   dispatch({
     type: GET_TODOS_REQUEST,
   });

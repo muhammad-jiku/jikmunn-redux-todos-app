@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react';
+
+//  external import
 import { useDispatch, useSelector } from 'react-redux';
-import { getTodosRequest } from '../utils/actions';
+
+//  internal import
+import { getTodos } from '../utils/actions';
 
 const Todos = () => {
   const dispatch = useDispatch();
   const { isLoading, todos, error } = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(getTodosRequest());
+    dispatch(getTodos());
   }, [dispatch]);
 
   return (
